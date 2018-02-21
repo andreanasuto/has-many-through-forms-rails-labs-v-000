@@ -11,8 +11,8 @@
 <% } %>
 
 <%= form_for @post do |f| %>
-  <%= f.fields_for :comments, @post.comments.build do |comment| %>
-    <%= comment.text_field :content %>
+  <%= f.fields_for :comment, @post.comments.build do |comment_field| %>
+    <%= comment_field.text_field :content %>
   <% end %>
   <%= f.submit %>
 <% end %>
