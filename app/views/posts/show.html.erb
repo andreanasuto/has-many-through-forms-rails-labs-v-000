@@ -14,5 +14,5 @@
   <%= fields_for :comment, @post.comments.build do |comment_field| %>
     <%= comment_field.text_field :content %>
   <% end %>
-  <%= f.submit %>
+  <%= f.submit "Create comment" %>
 <% end %>
