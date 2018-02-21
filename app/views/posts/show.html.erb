@@ -12,7 +12,7 @@
 
 <br><br>
 
-<%= form_for @post, url: comments_path, :html => { :method => :post} do |f| %>
+<%= form_for @comment, url: comments_path, :html => { :method => :post} do |f| %>
   <%= fields_for :comment, @post.comments.build do |comment_field| %>
     <%= comment_field.text_field :content %>
   <% end %>
