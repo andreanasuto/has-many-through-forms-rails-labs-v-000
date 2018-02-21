@@ -12,10 +12,7 @@
 
 <br><br>
 
-<%= form_for @comment, Comment.new, url: comments_path, :html => { :method => :post} do |f| %>
-  <%= fields_for :comment, @post.comments.build do |comment_field| %>
-    <%= comment_field.text_field :content %>
-  <% end %>
-  <br>
+<%= form_for @comment, Comment.new do |f| %>
+  <%= f.text_field :content %>
   <%= f.submit "Create comment" %>
 <% end %>
