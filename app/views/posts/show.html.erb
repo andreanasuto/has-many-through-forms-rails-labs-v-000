@@ -4,7 +4,7 @@
   <%= category.name %>
 <% end %>
 <%= @post.comments.each do |comment| %>
-  <%= comment.content %>
+  <%= comment.user.username %> says: <%= comment.content %>
   <% end %>
 <%= @post.comments.map(&:user).uniq.each { |user| %>
   <%= link_to user.username, user_path(user) %>
@@ -12,7 +12,7 @@
 <br><br>
 <li>
   <ol>
-    <%= @comment.user.username %> says: <%= @comment.content %> 
+    <%= @comment.user.username %> says: <%= @comment.content %>
   </ol>
 </li>
 <br><br>
