@@ -16,7 +16,7 @@
   <%= f.text_field :content %>
   <%= f.hidden_field :post_id, value: @post.id %>
   <%= f.collection_check_boxes :user_id, User.all, :id, :name %>
-  <%= f.fields_for :categories, post.categories.build do |categories_field| %>
+  <%= f.fields_for :user, @comment.user.build do |user_field| %>
     <%= categories_field.text_field :name %>
   <% end %>
   <%= f.submit %>
