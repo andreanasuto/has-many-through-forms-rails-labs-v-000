@@ -18,7 +18,7 @@
   <%= f.hidden_field :post_id, value: @post.id %>
   <%= f.collection_select :user_id, User.all, :id, :username, {:include_blank => 'Please Select'} %>
   <%= f.fields_for :user, @comment.user do |users_field| %>
-    <%= users_field.label :username %>
+    <%= users_field.label "Create a new username" %>
     <%= users_field.text_field :username %>
   <% end %>
   <%= f.submit %>
