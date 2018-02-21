@@ -9,12 +9,7 @@
 <%= @post.comments.map(&:user).uniq.each { |user| %>
   <%= link_to user.username, user_path(user) %>
 <% } %>
-<br><br>
-<li>
-  <ol>
-    <%= @comment.user.username %> says: <%= @comment.content %>
-  </ol>
-</li>
+
 <br><br>
 
 <%= form_for @comment do |f| %>
