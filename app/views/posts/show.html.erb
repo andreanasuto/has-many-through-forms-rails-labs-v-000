@@ -9,7 +9,7 @@
   <ol> <%= comment.user.username %> says: <%= comment.content %> </ol>
   <% end %>
 </li>
-<%= @post.comments.map(&:user).uniq.each { |user| %>
+<% @post.comments.map(&:user).uniq.each { |user| %>
   <p> <%= link_to user.username, user_path(user) %> </p>
 <% } %>
 
