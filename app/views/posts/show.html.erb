@@ -10,8 +10,7 @@
   <%= link_to user.username, user_path(user) %>
 <% } %>
 <br><br>
-binding.pry
-
+<%= @comment.user.username %>
 <br><br>
 
 <%= form_for @comment do |f| %>
