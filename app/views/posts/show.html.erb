@@ -6,7 +6,7 @@
 <br><br>
 <%= @post.comments.each do |comment| %>
 <li>
-  <p> <%= comment.user.username %> says: <%= comment.content %> </p>
+  <ol> <%= comment.user.username %> says: <%= comment.content %> </ol>
   <% end %>
 </li>
 <%= @post.comments.map(&:user).uniq.each { |user| %>
