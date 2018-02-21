@@ -10,7 +10,7 @@
   <%= link_to user.username, user_path(user) %>
 <% } %>
 
-<%= form_for @post do |f| %>
+<%= form_for @post, :url => { :controller => 'comments_controller', :action => "create" } do |f| %>
   <%= fields_for :comment, @post.comments.build do |comment_field| %>
     <%= comment_field.text_field :content %>
   <% end %>
