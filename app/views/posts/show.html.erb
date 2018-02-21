@@ -10,7 +10,7 @@
   <% end %>
 </li>
 <%= @post.comments.map(&:user).uniq.each { |user| %>
-  <br> <%= link_to user.username, user_path(user) %>
+  <p> <%= link_to user.username, user_path(user) %> </p>
 <% } %>
 
 <br><br>
