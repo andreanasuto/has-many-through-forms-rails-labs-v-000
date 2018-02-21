@@ -9,6 +9,9 @@
 <%= @post.comments.map(&:user).uniq.each { |user| %>
   <%= link_to user.username, user_path(user) %>
 <% } %>
+<br><br>
+
+<%= @comment.user.username %> says: great post!
 
 <br><br>
 
