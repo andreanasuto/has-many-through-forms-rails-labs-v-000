@@ -11,6 +11,6 @@
 <% } %>
 
 <%= form_for %>
-  <%= f.hidden_field :some_column %>
+  <%= f.hidden_field :some_column, value: comment.post_id = @post_id  %>
   <%= f.submit %>
 <% end %>
