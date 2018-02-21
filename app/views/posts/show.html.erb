@@ -10,7 +10,8 @@
   <%= link_to user.username, user_path(user) %>
 <% } %>
 
-<%= form_for %>
+<%= form_for comment do |f| %>
+  <%= f.label :content %>
   <%= f.hidden_field :comment.post_id, value: @post.id  %>
   <%= f.submit %>
 <% end %>
