@@ -12,7 +12,7 @@
 
 <%= form_for @post do |f| %>
   <%= f.fields_for :comments, @post.comments.build do |comment| %>
-    <%= comment_field.text_field :content %>
+    <%= comment.text_field :content %>
   <% end %>
   <%= f.submit %>
 <% end %>
