@@ -1,6 +1,4 @@
-<%= form_for post do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
+<%= form_for comment do |f| %>
   <%= f.label :content %>
   <%= f.text_area :content %>
   <%= f.collection_check_boxes :category_ids, Category.all, :id, :name %>
