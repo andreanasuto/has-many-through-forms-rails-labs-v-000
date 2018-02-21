@@ -5,8 +5,10 @@
 <% end %>
 <br><br>
 <%= @post.comments.each do |comment| %>
-  <%= comment.user.username %> says: <%= comment.content %>
+<li>
+  <p> <%= comment.user.username %> says: <%= comment.content %> </p>
   <% end %>
+</li>
 <%= @post.comments.map(&:user).uniq.each { |user| %>
   <br> <%= link_to user.username, user_path(user) %>
 <% } %>
