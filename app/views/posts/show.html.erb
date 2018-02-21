@@ -3,6 +3,7 @@
 <% @post.categories.each do |category| %>
   <%= category.name %>
 <% end %>
+<br><br>
 <%= @post.comments.each do |comment| %>
   <%= comment.user.username %> says: <%= comment.content %>
   <% end %>
