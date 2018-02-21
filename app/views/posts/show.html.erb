@@ -18,6 +18,7 @@
   <%= f.hidden_field :post_id, value: @post.id %>
   <%= f.collection_check_boxes :user_id, User.all, :id, :name %>
   <%= f.fields_for :user, @comment.user do |user_field| %>
+    <%= user_field.label :username%>
     <%= user_field.text_field :username %>
   <% end %>
   <%= f.submit %>
