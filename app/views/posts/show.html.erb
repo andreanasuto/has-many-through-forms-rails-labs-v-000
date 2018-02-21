@@ -10,7 +10,11 @@
   <%= link_to user.username, user_path(user) %>
 <% } %>
 <br><br>
-<%= @comment.user.username %>
+<li>
+  <ol>
+    <%= @comment.user.username %> says: <%= @comment.content %> 
+  </ol>
+</li>
 <br><br>
 
 <%= form_for @comment do |f| %>
