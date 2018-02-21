@@ -9,3 +9,8 @@
 <%= @post.comments.map(&:user).uniq.each { |user| %>
   <%= link_to user.username, user_path(user) %>
 <% } %>
+
+<%= form_for %>
+  <%= f.hidden_field :some_column %>
+  <%= f.submit %>
+<% end %>
